@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="m-3 text-center">
+    <form
+      class="form-inline"
+      (ngSubmit)="onSubmit(search.value)"
+      #search="ngForm"
+    >
+      <div class="form-group">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Enter search string"
+          name="search"
+          ngModel
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  <app-music-list [musics]="itunemusicservice.music"></app-music-list>
+</div>
